@@ -1,4 +1,4 @@
-ssh gary@10.0.0.154
+ssh yourLinux_id@your_designated_linux_master_IP
 
 ##################### Run this on all Linux nodes #######################
 
@@ -67,14 +67,14 @@ kubectl apply -f ./calico.yaml
 scp -r $HOME/.kube administrator@10.0.0.194:/users/administrator
 
 #Create folder "c:/k" on Windows node
-ssh administrator@10.0.0.194 'mkdir c:\k'
+ssh administrator@windows_node_ip_address 'mkdir c:\k'
 #Copy "config" file from master to Windows node
-scp -r $HOME/.kube/config administrator@10.0.0.194:/k/
+scp -r $HOME/.kube/config administrator@windows_node_ip_address:/k/
 
 ##################### Run this on other Linux nodes #######################
 exit
 
-ssh YOUR_ID@LINUX_NODE_IP
+ssh yourLinux_id@your_designated_linux_node_IP
     
 sudo -i 
     #Copy the token and cert from "kubeadm init" operation and run it below
