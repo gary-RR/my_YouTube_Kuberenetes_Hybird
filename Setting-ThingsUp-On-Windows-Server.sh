@@ -1,9 +1,6 @@
-#Run this on a Kubernetes node to get cert and token to join a node.
-kubeadm token create --print-join-command
-
 
 #################################################################################################################################
-ssh administrator@10.0.0.191
+ssh or remote desk to to your Windows node
 #####################################################################Open all ports#############################################
 #Create a new rule and allow all traffic In and out:
 New-NetFireWallRule -DisplayName "Allow All Traffic" -Direction OutBound -Action Allow 
