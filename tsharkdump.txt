@@ -1,0 +1,232 @@
+sudo tshark -i eth0  -V -Y "http"
+Running as user "root" and group "root". This could be dangerous.
+Capturing on 'eth0'
+Frame 79: 143 bytes on wire (1144 bits), 143 bytes captured (1144 bits) on interface eth0, id 0
+    Interface id: 0 (eth0)
+        Interface name: eth0
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jun 16, 2021 19:34:03.662646455 UTC
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1623872043.662646455 seconds
+    [Time delta from previous captured frame: 0.000082501 seconds]
+    [Time delta from previous displayed frame: 0.000000000 seconds]
+    [Time since reference or first frame: 3.545284402 seconds]
+    Frame Number: 79
+    Frame Length: 143 bytes (1144 bits)
+    Capture Length: 143 bytes (1144 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp:http]
+Ethernet II, Src: Microsof_00:2c:4b (00:15:5d:00:2c:4b), Dst: Microsof_00:2c:4f (00:15:5d:00:2c:4f)
+    Destination: Microsof_00:2c:4f (00:15:5d:00:2c:4f)
+        Address: Microsof_00:2c:4f (00:15:5d:00:2c:4f)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Microsof_00:2c:4b (00:15:5d:00:2c:4b)
+        Address: Microsof_00:2c:4b (00:15:5d:00:2c:4b)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.233.203, Dst: 192.168.168.89
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 129
+    Identification: 0x39af (14767)
+    Flags: 0x4000, Don't fragment
+        0... .... .... .... = Reserved bit: Not set
+        .1.. .... .... .... = Don't fragment: Set
+        ..0. .... .... .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 63
+    Protocol: TCP (6)
+    Header checksum: 0xee51 [validation disabled]
+    [Header checksum status: Unverified]
+    Source: 192.168.233.203
+    Destination: 192.168.168.89
+Transmission Control Protocol, Src Port: 41512, Dst Port: 80, Seq: 1, Ack: 1, Len: 89
+    Source Port: 41512
+    Destination Port: 80
+    [Stream index: 4]
+    [TCP Segment Len: 89]
+    Sequence number: 1    (relative sequence number)
+    Sequence number (raw): 1051838165
+    [Next sequence number: 90    (relative sequence number)]
+    Acknowledgment number: 1    (relative ack number)
+    Acknowledgment number (raw): 1806106994
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window size value: 502
+    [Calculated window size: 64256]
+    [Window size scaling factor: 128]
+    Checksum: 0x13ea [unverified]
+    [Checksum Status: Unverified]
+    Urgent pointer: 0
+    [SEQ/ACK analysis]
+        [iRTT: 0.000422404 seconds]
+        [Bytes in flight: 89]
+        [Bytes sent since last PSH flag: 89]
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.000504905 seconds]
+        [Time since previous frame in this TCP stream: 0.000082501 seconds]
+    TCP payload (89 bytes)
+Hypertext Transfer Protocol
+    GET /system HTTP/1.1\r\n
+        [Expert Info (Chat/Sequence): GET /system HTTP/1.1\r\n]
+            [GET /system HTTP/1.1\r\n]
+            [Severity level: Chat]
+            [Group: Sequence]
+        Request Method: GET
+        Request URI: /system
+        Request Version: HTTP/1.1
+    Host: 10.102.125.254:8000\r\n
+    User-Agent: curl/7.61.1\r\n
+    Accept: */*\r\n
+    \r\n
+    [Full request URI: http://10.102.125.254:8000/system]
+    [HTTP request 1/1]
+
+Frame 90: 59 bytes on wire (472 bits), 59 bytes captured (472 bits) on interface eth0, id 0
+    Interface id: 0 (eth0)
+        Interface name: eth0
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Jun 16, 2021 19:34:03.667899911 UTC
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1623872043.667899911 seconds
+    [Time delta from previous captured frame: 0.000000100 seconds]
+    [Time delta from previous displayed frame: 0.005253456 seconds]
+    [Time since reference or first frame: 3.550537858 seconds]
+    Frame Number: 90
+    Frame Length: 59 bytes (472 bits)
+    Capture Length: 59 bytes (472 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp:http:data:json]
+Ethernet II, Src: Microsof_00:2c:4f (00:15:5d:00:2c:4f), Dst: Microsof_00:2c:4b (00:15:5d:00:2c:4b)
+    Destination: Microsof_00:2c:4b (00:15:5d:00:2c:4b)
+        Address: Microsof_00:2c:4b (00:15:5d:00:2c:4b)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Microsof_00:2c:4f (00:15:5d:00:2c:4f)
+        Address: Microsof_00:2c:4f (00:15:5d:00:2c:4f)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.168.89, Dst: 192.168.233.203
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 45
+    Identification: 0x7abf (31423)
+    Flags: 0x4000, Don't fragment
+        0... .... .... .... = Reserved bit: Not set
+        .1.. .... .... .... = Don't fragment: Set
+        ..0. .... .... .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: TCP (6)
+    Header checksum: 0x6c95 [validation disabled]
+    [Header checksum status: Unverified]
+    Source: 192.168.168.89
+    Destination: 192.168.233.203
+Transmission Control Protocol, Src Port: 80, Dst Port: 41512, Seq: 207, Ack: 90, Len: 5
+    Source Port: 80
+    Destination Port: 41512
+    [Stream index: 4]
+    [TCP Segment Len: 5]
+    Sequence number: 207    (relative sequence number)
+    Sequence number (raw): 1806107200
+    [Next sequence number: 212    (relative sequence number)]
+    Acknowledgment number: 90    (relative ack number)
+    Acknowledgment number (raw): 1051838254
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window size value: 8195
+    [Calculated window size: 2097920]
+    [Window size scaling factor: 256]
+    Checksum: 0x21f4 [unverified]
+    [Checksum Status: Unverified]
+    Urgent pointer: 0
+    [SEQ/ACK analysis]
+        [iRTT: 0.000422404 seconds]
+        [Bytes in flight: 211]
+        [Bytes sent since last PSH flag: 5]
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.005758361 seconds]
+        [Time since previous frame in this TCP stream: 0.000000100 seconds]
+    TCP payload (5 bytes)
+    TCP segment data (5 bytes)
+[2 Reassembled TCP Segments (211 bytes): #89(206), #90(5)]
+    [Frame: 89, payload: 0-205 (206 bytes)]
+    [Frame: 90, payload: 206-210 (5 bytes)]
+    [Segment count: 2]
+    [Reassembled TCP length: 211]
+    [Reassembled TCP Data: 485454502f312e3120323030204f4b0d0a446174653a2057…]
+Hypertext Transfer Protocol
+    HTTP/1.1 200 OK\r\n
+        [Expert Info (Chat/Sequence): HTTP/1.1 200 OK\r\n]
+            [HTTP/1.1 200 OK\r\n]
+            [Severity level: Chat]
+            [Group: Sequence]
+        Response Version: HTTP/1.1
+        Status Code: 200
+        [Status Code Description: OK]
+        Response Phrase: OK
+    Date: Wed, 16 Jun 2021 19:34:03 GMT\r\n
+    Content-Type: application/json; charset=utf-8\r\n
+    Server: Kestrel\r\n
+    Transfer-Encoding: chunked\r\n
+    \r\n
+    [HTTP response 1/1]
+    [Time since request: 0.005253456 seconds]
+    [Request in frame: 79]
+    [Request URI: http://10.102.125.254:8000/system]
+    HTTP chunked response
+        Data chunk (52 octets)
+            Chunk size: 52 octets
+            Data (52 bytes)
+
+0000  5b 22 77 65 62 61 70 69 2d 73 65 72 76 69 63 65   ["webapi-service
+0010  2d 37 38 36 35 64 66 36 64 66 63 2d 63 32 34 78   -7865df6dfc-c24x
+0020  62 22 2c 22 31 39 32 2e 31 36 38 2e 31 36 38 2e   b","192.168.168.
+0030  38 39 22 5d                                       89"]
+                Data: 5b227765626170692d736572766963652d37383635646636…
+                [Length: 52]
+            Chunk boundary: 0d0a
+        End of chunked encoding
+            Chunk size: 0 octets
+        \r\n
+    File Data: 52 bytes
+JavaScript Object Notation: application/json
+    Array
+        String value: webapi-service-7865df6dfc-c24xb
+        String value: 192.168.168.89
+
+^C2 packets captured
+gary@kube-node2:~$
