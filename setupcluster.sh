@@ -84,7 +84,7 @@ exit
 
 exit
 
-##############################################Calico settings (must do you have Windows worker nodes)##################
+##############################################Calico settings (must perform these if you have Windows worker nodes)##################
 #On Linux master:
 	
 	#1.1- Install "calicococtl" on one or more nodes: "https://docs.projectcalico.org/getting-started/clis/calicoctl/install"
